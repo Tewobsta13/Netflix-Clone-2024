@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./Header.css";
+
 import NetflixLogo from "../../assets/images/Netflix.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -9,6 +11,11 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <div className="header_outer_container">
       <div className="header_container">
